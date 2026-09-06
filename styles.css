@@ -1,0 +1,56 @@
+:root{
+  --bg-deep: #0e2b1b;
+  --bg-mid:  #19492b;
+  --bg-lite: #78b776;
+  --accent:  #d4af37;
+  --card:   #fbf9f4;
+  --text:   #07121a;
+  --muted:  #6b7768;
+}
+
+*{box-sizing:border-box}
+body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;background: linear-gradient(135deg,var(--bg-deep) 0%, var(--bg-mid) 45%, var(--bg-lite) 100%);color:var(--text);line-height:1.5;min-height:100vh}
+.container{max-width:980px;margin:0 auto;padding:2rem}
+.site-header{background:linear-gradient(180deg,rgba(255,255,255,0.03),rgba(0,0,0,0.02));backdrop-filter:blur(4px);border-bottom:1px solid rgba(0,0,0,0.12)}
+.header-grid{display:flex;justify-content:space-between;align-items:center}
+.brand h1{margin:0;font-size:1.1rem;color:var(--card)}
+.brand .role{margin:0;color:var(--card);font-size:.95rem;font-weight:600}
+.nav a{margin-left:1rem;color:rgba(255,255,255,0.85);text-decoration:none}
+.hero{padding:3.5rem 0}
+.hero-grid{display:grid;grid-template-columns:1fr 280px;gap:2rem;align-items:start}
+.hero-text h2{margin:0 0 .5rem;font-size:1.8rem;color:var(--accent)}
+.lead{color:rgba(251,249,244,0.95);margin-top:0}
+.hero-text{background:rgba(0,0,0,0.28);padding:1.2rem;border-radius:10px}
+.actions{margin-top:1rem}
+.btn{display:inline-block;padding:.6rem 1rem;border-radius:10px;background:transparent;color:var(--card);text-decoration:none;border:1px solid rgba(255,255,255,0.12);margin-right:.5rem}
+.btn.primary{background:var(--accent);color:#091018;border:none}
+.hero-card{background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.08);padding:1rem;border-radius:10px;color:var(--card)}
+.avatar{width:80px;height:80px;border-radius:50%;background:linear-gradient(135deg,#cfe9bf,#9ecf8f);margin-bottom:1rem;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.avatar-img{width:100%;height:100%;object-fit:cover;display:block}
+.meta{margin:0;padding:0;font-size:.95rem}
+.meta dt{font-weight:700}
+.meta dt{font-weight:800;color:var(--accent);margin-bottom:6px}
+.meta dd{margin:0;color:rgba(251,249,244,0.95);margin-bottom:8px}
+.container p, .container li { color: rgba(251,249,244,0.92); }
+
+/* ensure experience text is readable */
+#experience, #experience ul, #experience li { color: rgba(251,249,244,0.92); }
+
+/* make dates slightly lighter but not pure white */
+.muted { color: rgba(251,249,244,0.72); }
+.about, .skills, .contact{padding:1.5rem 0;border-top:1px solid rgba(0,0,0,0.06);background:rgba(0,0,0,0.20);color:var(--card);border-radius:8px}
+.container h3, .container h4 { color: var(--accent); }
+.container h4 { margin-top: 0.6rem; font-size:1.05rem; }
+.skills ul{margin:0;padding-left:1.2rem;color:var(--card)}
+.muted{color:var(--muted)}
+.site-footer{padding:1.25rem 0;border-top:1px solid rgba(0,0,0,0.08);font-size:.95rem;color:var(--card)}
+.footer-grid{display:flex;justify-content:space-between;align-items:center}
+
+/* subtle diagonal texture */
+body::before{content:"";position:fixed;inset:0;pointer-events:none;background:repeating-linear-gradient(45deg, rgba(255,255,255,0.02) 0 2px, transparent 2px 6px)}
+
+@media(max-width:860px){
+  .hero-grid{grid-template-columns:1fr;}
+  .nav{display:none}
+}
+
